@@ -1,0 +1,58 @@
+/*
+* README
+*
+* Written by: Ziwei Chen
+* Jiaotong University All Rights Reserved
+*         on: 8-10-2017
+*/
+
+*****************************************************************************
+Section A: The purpose of this software
+This software reads in a compressor map image, then through certain manual help,
+reads in all data so that they can be processed and generated automatically
+by the machine. 
+
+*****************************************************************************
+Section B: How to Run?
+
+MainWindow Page:
+*****************************************************************************
+Open the software and then either click File -> Open or Press “Command + O” to
+open the image that you want to process. (Supports JPEG/JPG only.) Then you need
+to first click on the top left corner of the *coordinate system*, and then the bottom
+right corner to locate the exact coordinate of the image. Then hit “Next”.
+
+Rotation Curve Approx.: 
+*********************************************************************************************
+In the next page, you will need to user Bézier Curve to approximate the rotation curves
+on the image. We use Cubic Bézier curve in this case, so you need to first click on the
+start point of the curve, then two control points, and finally the end point of the curve. 
+You may click the button “Drag” on the side of the image view, to drag any of these points
+for better approximation. After dragging, click on the “Drag” button again to continue with
+setting up points. 
+
+After you are done with approximation, enter the information (rotation speed) for the line. 
+(NOTE that the order of information entering and the order of line approximation have to be exactly the same.)
+You may delete all the lines and points on the scene by clicking “Delete Line”. You may also clear the information
+storage by clicking on “Delete Storage”. When you are done, hit “Confirm and Store“ to go the the next page.
+
+Efficiency Line Approx.:
+*********************************************************************************************************************
+This process is very similar to the above section. Since efficiency line usually comes in an oval shape(or similar), 
+so you may need to use multiple bézier curves to approximate. After approximating the line, enter the information
+IMMEDIATELY and hit “Next Line”. You will notice that the small green points are gone. This means that you’ve done
+approximating one efficiency line. When you are completely done, hit “Confirm and Store”
+
+Display Table and Export:
+*********************************************************************************************************************
+You have reached the last page! In this interface, you will first need to enter the X, Y min and max value in the image
+and then hit “Confirm”. The original image will disappear and return a new, automatically generated new image. The software
+will automatically find intersections between rotation curves and efficiency lines. However, you may also manually click on
+the interface to enter data yourself. Click “Export as CSV” when you are done.
+
+Then you will need to enter Temperature and Pressure information so as to reduce and adjust the orignal speed 
+and mass flow info. Select the place that suits you the best to store the output CSV file. 
+
+
+
+
